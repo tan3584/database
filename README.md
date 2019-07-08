@@ -14,7 +14,6 @@ Install the dependencies
 
 ```sh
 $ npm install
-$ npm install nodemon
 ```
 Run app
 
