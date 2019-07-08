@@ -83,7 +83,7 @@ router.get('/logout', function(req, res){
   res.redirect('/users/login');
 });
 
-router.get('/admin',function(req,res){
+router.get('/admin',Secret,function(req,res){
   User.find({}, function(err,user){
     res.render('admin',{
       title: 'This is just a users list',
