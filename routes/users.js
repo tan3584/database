@@ -47,7 +47,7 @@ router.post('/register', function(req, res){
               console.log(err);
               return;
             } else {
-              req.flash('success','You are now registered and can log in');
+              req.flash('success','Success');
               res.redirect('/users/login');
             }
           });
@@ -86,8 +86,8 @@ router.get('/logout', function(req, res){
 router.get('/admin',function(req,res){
   User.find({}, function(err,user){
     res.render('admin',{
-      title: 'Admin page',
-      users :user
+      title: 'This is just a users list',
+      users : user
     })
   })
 })

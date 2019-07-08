@@ -12,7 +12,7 @@ const config = require('./config/database');
 let User = require('./models/user');
 
 
-mongoose.connect(config.database,{useNewUrlParser: true});
+mongoose.connect(config.database);
 let db = mongoose.connection;
 
 db.once('open', function(){
@@ -81,5 +81,5 @@ let users = require('./routes/users');
 app.use('/users', users);
 
 app.listen(3000, function(){
-  console.log('Server started on port 3000...');
+  console.log('Server started on port 3000');
 });
