@@ -1,0 +1,11 @@
+extend layout
+
+block content
+    h1 #{title}
+    ul.list-group
+        li.list-group-item= user.name
+        li.list-group-item= user.email
+        li.list-group-item *********
+    hr
+    a.btn.btn-primary(href ='/users/edit/'+user._id) Edit
+    a.btn.btn-warning.delete-user(href ='/' ,data-id = user._id) Delete

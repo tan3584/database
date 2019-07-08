@@ -1,0 +1,8 @@
+extend layout
+
+block content
+    h1 #{title}
+    ul.list-group
+        each user, i in users
+            li.list-group-item
+                a(href='/users/'+user._id)=user.name
